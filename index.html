@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frisbii Checkout Styling Demo</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Frisbii Checkout Demo</h1>
+        <div class="config-panel">
+          <h2>Configuration</h2>
+          <div class="form-group">
+            <label for="session-id">Checkout Session ID:</label>
+            <input type="text" id="session-id" placeholder="cs_51514ad655dbcd515b2ba4e81d55ca02" />
+            <small>Get a session ID from your backend API. Format: cs_...</small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="open-checkout" class="primary-button">Open Checkout</button>
+        </div>
+
+        <div id="checkout-container"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
