@@ -9,10 +9,14 @@ export default defineConfig({
     outDir: "dist",
   },
   server: {
-    https: {
-      key: fs.readFileSync("./localhost+2-key.pem"),
-      cert: fs.readFileSync("./localhost+2.pem"),
-    },
+    ...(process.env.CI
+      ? {}
+      : {
+          https: {
+            key: fs.readFileSync("./localhost+2-key.pem"),
+            cert: fs.readFileSync("./localhost+2.pem"),
+          },
+        }),
     port: 5173,
   },
 })
