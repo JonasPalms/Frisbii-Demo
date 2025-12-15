@@ -164,16 +164,6 @@ h1 {
   min-height: 0; /* Allow flexbox to work properly */
 }
 
-#checkout-container:empty::before {
-  content: "Checkout will appear here when opened";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #9ca3af;
-  font-style: italic;
-}
-
 @media (max-width: 768px) {
   body {
     padding: 1rem;
